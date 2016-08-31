@@ -10,6 +10,8 @@ WORKDIR /usr/src/app
 COPY Gemfile /usr/src/app/
 COPY Gemfile.lock /usr/src/app/
 
+#nokogiri can't build libxml on alpine
+RUN bundle config build.nokogiri --use-system-libraries
 RUN bundle install
 
 COPY . /usr/src/app
