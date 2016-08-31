@@ -2,7 +2,7 @@ FROM ruby:alpine
 
 RUN bundle config --global frozen 1
 
-RUN apk add --no-cache git build-base
+RUN apk add --no-cache git build-base postgresql-dev
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
