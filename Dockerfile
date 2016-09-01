@@ -2,7 +2,7 @@ FROM ruby:slim
 
 RUN bundle config --global frozen 1
 
-RUN apt-get update && apt-get install -y git postgresql-dev nodejs
+RUN apt-get update && apt-get install -y git libpq-dev nodejs
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
