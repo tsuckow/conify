@@ -2,7 +2,7 @@ FROM ruby:slim
 
 RUN bundle config --global frozen 1
 
-RUN apt-get update && apt-get install -y git build-essential libpq-dev nodejs
+RUN apt-get update && apt-get install -y git build-essential libpq-dev nodejs npm
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
