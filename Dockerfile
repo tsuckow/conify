@@ -18,6 +18,6 @@ RUN bundle install
 
 COPY . /usr/src/app
 
-RUN cd client && npm install
+RUN cd client && npm install && npm run build:production
 
-CMD foreman start -f Procfile.dev
+CMD bundle exec puma -C config/puma.rb
