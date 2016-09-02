@@ -1,5 +1,6 @@
 FROM ruby:slim
 
+#For https://github.com/bundler/bundler/issues/4576
 RUN gem install bundler
 RUN bundle config --global frozen 1
 
