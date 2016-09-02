@@ -1,5 +1,6 @@
 FROM ruby:slim
 
+RUN gem install bundler
 RUN bundle config --global frozen 1
 
 #Debian has a really old nodejs, pull in the 4.x LTS
