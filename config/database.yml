@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: conify_production
-  username: conify
-  password: <%= ENV['CONIFY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
